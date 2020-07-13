@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+ <head>
+ 	<title>typewritter</title>
+ 	<link rel="stylesheet" type="text/css" href="css/main.css">
+ </head> 
+ <body> 
+  <h1>Typewriter</h1> 
+  <button onclick="typeWriter()">CLICK HERE 👇</button> 
+  <p id="demo"></p> 
+  <script>
+var i = 0;
+var txt = '  Who Is Michelle Obama?Michelle Obama is a lawyer and writer who was the first lady of the United States from 2009 to 2017. She is the wife of the 44th U.S. president, Barack Obama. As first lady, Michelle focused her attention on social issues such as poverty, healthy living and education. Her 2018 memoir, Becoming, discusses the experiences that shaped her, from her childhood in Chicago to her years living in the White House.Early LifeMichelle was born Michelle LaVaughn Robinson on January 17, 1964, in Chicago, Illinois. Michelles father, Fraser Robinson, was a city-pump operator and a Democratic precinct captain. Her mother, Marian, was a secretary at Spiegels but later stayed home to raise Michelle and her older brother, Craig. At just 21 months apart in age, Craig and Michelle were often mistaken for twins.The Robinson family lived in a small bungalow on Chicagos South Side. Michelle and Craig shared quarters, sleeping in the living room with a sheet serving as a makeshift room divider. They were a close-knit family, typically sharing meals, reading and playing games together.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script> 
+ </body>
+</html>
